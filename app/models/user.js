@@ -52,8 +52,6 @@ const userSchema = new mongoose.Schema({
   }
 })
 
-dob
-
 userSchema.plugin(uniqueValidator)
 
 userSchema.methods.comparePassword = function (password) {
