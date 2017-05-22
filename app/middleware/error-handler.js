@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('express-api-template:error-handler')
+const debug = require('debug')('project-3-cms-ramrod-api:error-handler')
 
 const errorHandler = (err, req, res, next) => {
   // jshint unused:false
