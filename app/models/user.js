@@ -15,7 +15,28 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   passwordDigest: String
-}, {
+},
+//   username: {
+//     type: String,
+//     required: true,
+//     unique: true
+// },
+//   firstName: {
+//     type: String,
+//     unique: false,
+//     required: true
+//   },
+//   lastName: {
+//     type: String,
+//     unique: false,
+//     required: true
+//   },
+//   dob: {
+//     type: Date,
+//     require: true,
+//     match: /\d{2}-\d{2}-\d{4}/
+//   },
+{
   timestamps: true,
   toJSON: {
     virtuals: true,
@@ -30,6 +51,8 @@ const userSchema = new mongoose.Schema({
     virtuals: true
   }
 })
+
+dob
 
 userSchema.plugin(uniqueValidator)
 
