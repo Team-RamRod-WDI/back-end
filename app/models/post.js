@@ -19,7 +19,7 @@ const postSchema = new mongoose.Schema({
   _page: {
     type: mongoose.Schema.Types.ObjectId, // figure out a way to grab PageId? Is this valid?
     ref: 'Page',
-    required: true
+    required: false
   }
 }, {
   timestamps: true,
@@ -34,7 +34,7 @@ const postSchema = new mongoose.Schema({
 })
 
 postSchema.virtual('length').get(function length () {
-  return this.text.length
+  return this.content.length
 })
 
 const Post = mongoose.model('Post', postSchema)
