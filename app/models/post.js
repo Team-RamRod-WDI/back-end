@@ -10,14 +10,14 @@ const postSchema = new mongoose.Schema({
   content: {
     type: String,
     required: true
-  }
+  },
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
   },
   _page: {
-    type: mongoose.Schema.Types.PageId, // figure out a way to grab PageId? Is this valid?
+    type: mongoose.Schema.Types.ObjectId, // figure out a way to grab PageId? Is this valid?
     ref: 'Page',
     required: true
   }
