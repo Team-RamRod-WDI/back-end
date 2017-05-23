@@ -14,7 +14,7 @@ const pageSchema = new mongoose.Schema({
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true
+    required: false
   }
 }, {
   timestamps: true,
@@ -29,7 +29,7 @@ const pageSchema = new mongoose.Schema({
 })
 
 pageSchema.virtual('length').get(function length () {
-  return this.text.length
+  return this.description.length
 })
 
 const Page = mongoose.model('Page', pageSchema)
