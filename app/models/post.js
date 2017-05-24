@@ -17,9 +17,8 @@ const postSchema = new mongoose.Schema({
     required: true
   },
   _page: {
-    type: mongoose.Schema.Types.ObjectId, // figure out a way to grab PageId? Is this valid?
-    ref: 'Page',
-    required: false
+    type: String,
+    required: true
   }
 }, {
   timestamps: true,
