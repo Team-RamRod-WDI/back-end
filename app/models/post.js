@@ -17,7 +17,7 @@ const postSchema = new mongoose.Schema({
     required: true
   },
   _page: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     required: true
   }
 }, {
